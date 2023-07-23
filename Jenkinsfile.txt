@@ -2,13 +2,6 @@ pipeline {
     agent any // This pipeline can run on any available agent
 
     stages {
-        stage('Checkout') {
-            steps {
-                // Checkout the code from the GitHub repository
-                git 'https://github.com/amankr158/reactappp'
-            }
-        }
-
         stage('Install dependencies') {
             steps {
                 // Install Node.js and npm if not already installed
