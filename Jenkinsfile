@@ -5,8 +5,7 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 // Install Node.js and npm if not already installed
-                sh 'curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -'
-                sh 'sudo apt-get install -y nodejs'
+                sh 'node --version'
 
                 // Install project dependencies
                 sh 'npm install'
