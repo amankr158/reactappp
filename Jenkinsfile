@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from the GitHub repository
-                git 'https://github.com/yourusername/your-react-app.git'
+                git 'https://github.com/amankr158/reactappp'
             }
         }
 
@@ -26,16 +26,5 @@ pipeline {
                 sh 'npm run build'
             }
         }
-    }
-
-    post {
-        success {
-            // If the build is successful, you can perform additional actions here
-            echo 'Build successful!'
         }
-        failure {
-            // If the build fails, you can perform actions here (e.g., send notifications)
-            echo 'Build failed!'
-        }
-    }
 }
